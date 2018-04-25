@@ -1,84 +1,233 @@
-/* PROBLEM 1: Remove white margin of body, html */
-/* YOUR CODE HERE */
-html,body{
-	padding:0px;
-	margin:0px;
-}
 
-/* PROBLEM 2: Select profile picture and make it round */
-/* YOUR CODE HERE */
-#profile-pic{
-	border-radius: 50%;
+/*body - all pages/general */
+html, body { padding:0px; margin: 0px; }
+/* 
+TO SELECT A FONT: 
+.selector{
+font-family: 'Archivo Black', sans-serif; OR
+font-family: 'Yantramanav', sans-serif; OR
+font-family: 'Roboto Mono', monospace; OR
+font-family: 'Arimo', sans-serif;
+}*/ 
+
+
+/* navigation bar*/
+#navbar{
 	overflow: hidden;
+	position: fixed;
+	width: 95%;
+	height: 80px;
+	display: inline-block;
+	background-color: white;
+}
+.navbar-logo{
+	height: 60px;
+	width: 60px;
+	margin: -8px;
+	margin-left: 20px;
+	padding: -8px;
 }
 
 
-/* PROBLEM 3: Flesh our your follow button! 5 px for the 
-top and bottom, 30 for the left and right*/
-/* YOUR CODE HERE */
-#follow-button{
-	padding:5px 30px 5px 30px;
+
+a {
+	text-decoration: none;
+	color: black;
+	position: relative;
+}
+.navbar-logo{
+	float: left;
+	text-align: center;
+	padding: 15px 15px;
 }
 
-/* PROBLEM 4: Turn items into a square, 120x120 px image */
-/* YOUR CODE HERE */
-.item{
-	height:120px;
-	width:120px;
+span:hover{
+	width: 5px;
+	transition: 0.3s;
+	border-bottom: 4 px solid yellow;
 }
 
-/* PROBLEM 5: Create a 10 px horizontal space between items */
-/* YOUR CODE HERE */
-.item{
-	margin-left:10px;
+span{
+/*	position: relative;*/
+	top: 10;
+	height: 2px;
+}
+/* HOW TO CENTER THE TITLE ON OTHER PAGES BESIDES HOME PAGE????*/
+.navbar-title{
+	position: relative;
+	float: right;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-right: 25%;
+	font-family: 'Arimo', sans-serif;
+	font-weight: bold;
+	font-size: 38px;
 }
 
-/* PROBLEM 6: Create a 10px vertical space between rows */
-/* YOUR CODE HERE */
 
-.row{
-	margin-top: 10px;
+.navbar-button{
+	margin-right: 20px;
+	text-align: center;
+	text-shadow: 2px; 
+	border-bottom-width: 2.5px;
+	border-bottom-color: yellow;
+	font-size: 15;
+	position: relative;
+	float: right;
+	top: 50%;
+	transform: translateY(-50%);
+	font-family: 'Arimo', sans-serif;
+	font-weight: bold;
 }
 
-/* PROBLEM 7: Add 20px of space between each navigation item */
-/* YOUR CODE HERE */
-
-.navbar-item{
-	margin:20px;
+/*contact bar*/ 
+#contact-bar{
+	position: fixed;
+	top: 92%;
+	width: 100%;
+	text-align: center;
+	background-color: white;
 }
 
-/* PROBLEM 8: Create a hover effect, so that items will have 
-full opacity when hovered over! It should also have a 
-transition period of 0.2 seconds*/
-/* YOUR CODE HERE */
+/*.contact{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}*/
 
-.item:hover{
-	opacity: 1;
-	transition: 2s;
+
+.contact{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	font: black;
+	font-family: 'Arimo', sans-serif;
+	font-weight: lighter;
 }
 
-/* PROBLEM 9: Add a click effect to the follow button, so 
-the font becomes size 16 when clicked on!*/
-/* YOUR CODE HERE */
 
-#follow-button:active{
-	font-size: 16;
+
+
+
+/* HOME PAGE index.html*/ 
+
+#content{
+	display: inline-block;	
+	position: relative;
+	margin-top: 140px;
+	margin-left: 18%;
+	}
+
+.big-photo{
+	display: inline-block;
+	height: 420px;
+
 }
 
-/* PROBLEM 10: Add a hover effect such that the text of the
-navigation has an opacity of 1 when hovered over!*/
-/* YOUR CODE HERE */
-
-.navbar-item:hover{
-	opacity:1;
+.content-right{
+	display: inline-block;
+	vertical-align: 55%;
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 125px; 
+	text-shadow: 4px 2px yellow;
+	padding-left: 70px;
 }
 
-/* PROBLEM 11: In one selection, make the follow button, picture 
-items, and nav bar items have a pointer cursor */
+.tldr{
+	font-family: 'Arimo', sans-serif;
+	position: relative;
+	font-size: 20px;
+	align-content: center;
+	margin-top: 30px;
+	}
 
-#content:hover{
-	cursor: pointer;
+
+/*ABOUT PAGE*/
+
+#content{
+	padding-top: 70px;
 }
+/*.my-face{
+	display: block;
+	rotate: 90%;
+	height: 350px;
+	float: left;
+	margin-top: 200px;
+	}*/ 
+
+.content-intro{
+	display: block;
+	/*margin-left: 100px;
+	float: right;*/
+	text-align: center;
+}
+
+.intro{
+	font-family: 'Arimo', sans-serif;
+	font-size: 40px;
+	align-content: center;
+	margin-top: 30px;
+	/*margin-left: 30%;
+	font-weight: bold;*/
+}
+
+.my-name{
+	font-family: 'Archivo Black', sans-serif;
+	font-size: 80px;
+	/*margin-left: 10%;*/ 
+	text-shadow: 4px 4px yellow;
+	text-align: center;
+}
+
+.tagline{
+	font-family: 'Arimo', sans-serif;
+	font-size: 18px;
+	padding-top: 60px;
+	font-weight: bold;
+	/*padding-left: 25px;*/
+	text-align: center;
+}
+
+
+
+
+/*education timeline*/
+#date-container{
+	position: absolute;
+	margin-top: 220px;
+	margin-left: 35%;
+	line-height: 40px;
+	font-family: 'Arimo', sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 2px yellow;
+}
+
+
+
+
+
+
+/*TEXT DECORATION*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
